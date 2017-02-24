@@ -4,6 +4,7 @@ import jwt from 'jwt-simple'
 import mongoose from 'mongoose'
 import bcrypt from 'bcrypt-nodejs'
 import jwtMiddleware from 'express-jwt'
+import cors from 'cors'
 
 import app from './app'
 const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/identitydb'
@@ -11,6 +12,8 @@ const PORT = process.env.PORT || 3002
 const SECRET = process.env.SECRET
 
 mongoose.connect(MONGO_URL)
+
+app.use(cors())
 
 app.get('/login', async (req, res) => {
   const credentials = auth(req)
