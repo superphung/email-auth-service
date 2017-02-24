@@ -1,1 +1,1 @@
-# server-boilerplate
+# email-auth-service
