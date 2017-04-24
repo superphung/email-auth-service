@@ -7,7 +7,7 @@ import jwtMiddleware from 'express-jwt'
 import cors from 'cors'
 
 import app from './app'
-const MONGO_URL = process.env.MONGO_URL || 'mongodb://localhost/identitydb'
+const MONGO_URL = process.env.MONGO_URL || 'mongodb://mongo/identitydb'
 const PORT = process.env.PORT || 3002
 const SECRET = process.env.SECRET
 
